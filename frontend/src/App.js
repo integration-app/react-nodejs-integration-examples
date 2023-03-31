@@ -1,6 +1,5 @@
-import {IntegrationAppProvider} from "@integration-app/react";
-import IntegrationsList from "./IntegrationsList";
-import {useEffect, useState} from "react";
+import { IntegrationAppProvider, useIntegrationApp } from "@integration-app/react";
+import { useEffect, useState } from "react";
 
 function App() {
 
@@ -17,10 +16,25 @@ function App() {
         return (
             // IntegrationAppProvider allows you to use Integration.app React hooks in all child components
             <IntegrationAppProvider token={accessToken}>
-                <IntegrationsList/>
+
+                <div class="mockup-code">
+                    <pre data-prefix="$"> <code> const iApp = useIntegrationApp(); </code></pre>
+                    <pre data-prefix="$"> <code> iApp.open() </code></pre>
+                </div>
+                <div class="flex justify-center px-4 py-16 ">
+
+                    <Integrations />
+                </div>
             </IntegrationAppProvider>
         )
     }
+}
+
+function Integrations() {
+    const iApp = useIntegrationApp()
+    return (
+        <button onClick={() => iApp.open()} className="btn btn-wide btn-primary">Integrations</button>
+    )
 }
 
 export default App

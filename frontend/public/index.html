@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Integration App Demo Test</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    
+    
+  </head>
+  <body >
     <style>
       img {
         max-width:80px;
       }
+      #root, body, html {
+        width: 100%;
+        height: 100%;
+        }
+        h1 {
+          font-size: 2rem;
+        }
     </style>
-  </head>
-  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root" class="grid justify-center content-center"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
