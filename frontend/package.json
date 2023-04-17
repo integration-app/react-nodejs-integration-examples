@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@integration-app/react": "^0.1.25",
+    "@integration-app/react": "^0.2.0",
     "console-browserify": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "exports": {
+    "./flows/*": {
+      "require": "dist/flows/index.js",
+      "module": "dist/flows/index.mjs"
+    }
   },
   "scripts": {
     "start": "react-scripts start"
