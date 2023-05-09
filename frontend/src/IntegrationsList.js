@@ -29,6 +29,11 @@ function IntegrationsList() {
                             refreshIntegrations()
                         }}>Connect
                         </button>
+
+                        <button onClick={async () => {
+                            await integrationApp.integration(integration.key).open();
+                        }}>Configure
+                        </button>
                     )}</td>
                 </tr>
             ))}
